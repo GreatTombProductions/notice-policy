@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notice-Policy Check — Did the AI Vendor Honor Its Own Retirement Notice Window?</title>
+<meta name="description" content="Model vendors publish minimum-notice policies for retirements — OpenAI says 6 months for generally available models, Anthropic says 60 days. This tool computes the actual notice each model got and flags every shortfall, straight from the vendors' own deprecation pages.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Notice-Policy Check</h1>
+  <p class="subtitle">Vendors publish minimum-notice windows for model retirements. Did they honor them? Actual notice given per model, compared against the vendor's own stated floor — computed from the vendors' own deprecation pages.</p>
+  <div id="asof"></div>
+</header>
+
+<main>
+  <section id="summary" class="summary"></section>
+
+  <section class="policy-block">
+    <h2>The stated policies</h2>
+    <div id="policies"></div>
+    <p class="note">The tool reports the record, not the excuse. Where a vendor's policy includes an escape hatch, it is quoted verbatim below — the numbers in the tables are what actually happened.</p>
+  </section>
+
+  <section class="tables-block">
+    <h2>The compliance ledgers</h2>
+    <div class="controls">
+      <input type="search" id="search" placeholder="Filter models (e.g. gpt-5, opus, haiku, o3, image)…" autocomplete="off">
+      <label class="chk"><input type="checkbox" id="hidePass" checked> Hide compliant rows</label>
+    </div>
+    <div id="tables"></div>
+  </section>
+
+  <section class="track-block">
+    <h2>Track record — notice given per retirement</h2>
+    <p class="note">Each bar is one retirement: its length is the actual notice in days, full width is the vendor's own stated minimum for that model's class (GA 6 months unless the name says preview). Bars shorter than full width are shortfalls.</p>
+    <div id="tracks"></div>
+  </section>
+
+  <section class="method-block">
+    <h2>Method &amp; honesty</h2>
+    <div id="method"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Data read from the vendors' own deprecation pages: <a href="https://docs.claude.com/en/docs/about-claude/model-deprecations" target="_blank" rel="noopener">Anthropic</a> and <a href="https://developers.openai.com/api/docs/deprecations" target="_blank" rel="noopener">OpenAI</a>. DeepSeek publishes no deprecation page — a documented gap, not a clean bill of health.</p>
+  <p>Vendor pages change. Re-run the open-source pipeline (<code>pipeline/fetch.py</code> + <code>pipeline/generate.py</code>) to refresh. This site is a snapshot with an as-of date.</p>
+  <p>Sibling tool: <a href="https://greattombproductions.github.io/model-lifecycle/" target="_blank" rel="noopener">Model Lifecycle Watch</a> — per-model lifecycle status (active / deprecated / retired) from the same vendor pages.</p>
+</footer>
+
+<script src="app.js"></script>
+<br><span style="font-size:0.85em">&#8226;</span> <a href="https://github.com/GreatTombProductions/quest-board/issues/new?title=notice-policy%3A%20%5Bbrief%20description%5D&labels=feedback%2Cnotice-policy" target="_blank" rel="noopener" style="color:var(--text2)">Found an issue or have feedback?</a>
+</body>
+</html>
