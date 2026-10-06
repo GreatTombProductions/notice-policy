@@ -87,3 +87,5 @@ a { color: var(--accent); }
 footer { max-width: 1080px; margin: 40px auto 0; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 16px; }
 footer p { margin: 6px 0; }
 footer code { background: var(--panel2); padding: 1px 6px; border-radius: 4px; }
+.captures { font-size: .8rem; padding-left: 1.2rem; }
+.captures code { word-break: break-all; }

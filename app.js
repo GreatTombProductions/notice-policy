@@ -25,8 +25,8 @@ function renderSummary() {
   const el = document.getElementById("summary");
   const html = Object.entries(DATA.track_records).map(([vendor, tr]) => {
     const pol = DATA.policies[vendor];
-    const floors = (pol.floors || []).map(f => `<span class="floor">${esc(f.quote)}</span>`).join("");
-    const below = Object.entries(tr.below_floor || {}).map(([k, n]) => `<span class="floor">${n} below ${esc(k)} floor</span>`).join("");
+    const floors = (pol.floors || []).map(f => `<span class="floor">${esc(f.quote)}</span>`).join("<br>");
+    const below = Object.entries(tr.below_floor || {}).map(([k, n]) => `<span class="floor">${n} below ${esc(k)} floor</span>`).join("<br>");
     const verdict = tr.with_notice > 0 && tr.min_days !== null
       ? (Object.values(tr.below_floor || {}).some(n => n > 0)
           ? `<span class="vbadge short">SHORTFALLS ON RECORD</span>`
@@ -151,8 +151,11 @@ function renderMethod() {
     <p><b>The floors are the vendors' own words.</b> OpenAI: “Generally available models: At least 6 months.” Anthropic: “at least 60 days' notice before model retirement for publicly released models.” Month floors are evaluated with calendar-month arithmetic (announcement + 6 months), which is the truest reading of “6 months”; this can differ from a flat-day count by 1–2 days near the boundary.</p>
     <p><b>Which floor applies.</b> For models whose name contains <code>preview</code> (the vendor's own criterion: “identified by preview in the model name”), the preview floor (≈2 weeks) is the primary comparison; all other models are compared against the GA floor (6 months). The other floors are shown on every row so you can apply any class judgment yourself.</p>
     <p><b>What is NOT asserted.</b> This tool does not adjudicate the vendor's escape hatch (“Unless safety or compliance concerns require a faster timeline…”) — it quotes it and reports the record. A SHORT row is the record; whether the exception applies is the vendor's claim to make with evidence.</p>
-    <p><b>Honest coverage.</b> A model with no announcement date on the page is listed as <span class="vbadge na">n/a</span> with its reason — never assumed. DeepSeek publishes no deprecation page and is listed as a documented gap, not hidden. API/system deprecations (Assistants API, legacy endpoints) are excluded — the stated notice floors apply to models.</p>
-    <p><b>Refresh.</b> Snapshot generated ${DATA.as_of ? "as of " + DATA.as_of : ""}. Re-run <code>pipeline/fetch.py</code> then <code>pipeline/generate.py</code>; vendor pages are the source of truth and change without notice.</p>`;
+    <p><b>Honest coverage.</b> A model with no announcement date or no retirement date on the page is listed as <span class="vbadge na">n/a</span> with its reason — never assumed. DeepSeek publishes no deprecation page and no notice policy, so it is listed as a documented gap, not hidden. API/system deprecations (Assistants API, legacy endpoints) are excluded — the stated notice floors apply to models.</p>
+    <p><b>Refresh.</b> Snapshot ${DATA.as_of ? "as of " + esc(DATA.as_of) : ""}. Vendor pages are the source of truth and change without notice. Each page is kept as captured; its SHA-256 identifies the exact bytes used:</p>
+    <ul class="captures">${(DATA.sources || []).filter(s => s.raw_sha256).map(s =>
+      `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.url.replace(/^https:\/\//, ""))}</a> · fetched ${esc((s.fetched_at || "").replace("T", " ").replace("+00:00", " UTC"))} · <code>${esc(s.raw_sha256)}</code></li>`).join("")}</ul>
+    <p>To rebuild: <code>pipeline/fetch.py</code> captures the pages, then <code>pipeline/generate.py</code> builds from them and stops if any vendor statement changed until the change is reviewed.</p>`;
 }
 
 async function init() {
@@ -166,14 +169,14 @@ async function init() {
     return;
   }
   const asof = document.getElementById("asof");
-  asof.innerHTML = `Snapshot as of ${esc(DATA.as_of)} · generated ${esc((DATA.generated_at || "").replace("T", " ").replace("+00:00", " UTC"))} · sources: ${esc(DATA.sources.map(s => `${s.vendor} (${s.status})`).join(", "))}`;
+  asof.innerHTML = `Snapshot as of ${esc(DATA.as_of)} · generated ${esc((DATA.generated_at || "").replace("T", " ").replace("+00:00", " UTC"))} · sources: ${esc(DATA.sources.map(s => `${s.vendor} (${s.status === "ok" ? "fetched " + (s.fetched_at || "").slice(0, 10) : s.status})`).join(", "))}`;
   renderSummary();
   renderPolicies();
-  renderTables("", false);
-  renderTracks();
-  renderMethod();
   const search = document.getElementById("search");
   const hidePass = document.getElementById("hidePass");
+  renderTables(search.value, hidePass.checked);
+  renderTracks();
+  renderMethod();
   search.addEventListener("input", () => renderTables(search.value, hidePass.checked));
   hidePass.addEventListener("change", () => renderTables(search.value, hidePass.checked));
 }
