@@ -13,9 +13,9 @@ Model vendors publish minimum-notice policies for retirements — OpenAI: "Gener
 - **Track record** — notice days per completed retirement, oldest → newest, with the vendor's own floor as full-width reference
 - **Honest coverage** — DeepSeek publishes no deprecation page or notice policy (documented gap, not hidden); models without an announcement or retirement date are marked n/a with the reason, never assumed
 
-## Headline findings (snapshot 2026-10-06)
+## Headline findings (snapshot 2026-10-30)
 
-- **OpenAI:** 72 of 146 models with computable notice get less than the stated 6-month GA floor. 64 fall short of the floor that applies to them under OpenAI's own preview criterion. The 2026-04-22 legacy-snapshot batch gave about 92 days, roughly half the stated floor. gpt-5.4-cyber was announced 2026-09-11 and shut down 2026-10-01: 20 days, short of the GA and specialized floors and above only the preview floor. tts-1, tts-1-hd and two gpt-4o-mini-tts snapshots get 97 days (2026-10-01 to 2027-01-06): short of the GA floor, above the 3-month specialized floor. Boundary cases (182 days against a 183-day floor) and genuine shortfalls (3 days, Codex 2023) both appear.
+- **OpenAI:** 74 of 156 models with computable notice get less than the stated 6-month GA floor. 66 fall short of the floor that applies to them under OpenAI's own preview criterion. The 2026-04-22 legacy-snapshot batch gave about 92 days, roughly half the stated floor. gpt-5.4-cyber was announced 2026-09-11 and shut down 2026-10-01: 20 days, short of the GA and specialized floors and above only the preview floor. tts-1, tts-1-hd, gpt-4o-mini-tts and two dated gpt-4o-mini-tts snapshots get 97 days (2026-10-01 to 2027-01-06): short of the GA floor, above the 3-month specialized floor. Boundary cases (182 days against a 183-day floor) and genuine shortfalls (3 days, Codex 2023) both appear.
 - **Anthropic:** 20 retirements on record with 60–189 days' notice, **zero below the stated 60-day floor**. Claude Sonnet 4.5 (announced 2026-09-30, retiring 2026-11-30) gets 61 days. The 2026-08-12 snapshot listed 12. Its parser skipped the oldest history section, so the Claude 1.x and Instant retirements (63 days each) were missing.
 
 ## Pipeline

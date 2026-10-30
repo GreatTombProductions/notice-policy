@@ -1,7 +1,7 @@
 {
  "anthropic": {
   "policy": {
-   "text": "Anthropic notifies customers with active deployments for models with upcoming retirements, providing at least 60 days' notice before model retirement for publicly released models",
+   "text": "Anthropic notifies customers with active deployments for models with upcoming retirements, providing at least 60 days’ notice before model retirement for publicly released models",
    "floors": [
     {
      "class": "publicly released models",
@@ -75,7 +75,7 @@
     "2025-08-13",
     "2025-10-28",
     null,
-    "claude-sonnet-4-6"
+    "claude-sonnet-5-5"
    ],
    [
     "claude-3-5-sonnet-20241022",
@@ -83,7 +83,7 @@
     "2025-08-13",
     "2025-10-28",
     null,
-    "claude-sonnet-4-6"
+    "claude-sonnet-5-5"
    ],
    [
     "claude-3-7-sonnet-20250219",
@@ -91,7 +91,7 @@
     "2025-10-28",
     "2026-02-19",
     null,
-    "claude-sonnet-4-6"
+    "claude-sonnet-5-5"
    ],
    [
     "claude-3-haiku-20240307",
@@ -115,7 +115,7 @@
     "2025-01-21",
     "2025-07-21",
     null,
-    "claude-sonnet-4-6"
+    "claude-sonnet-5-5"
    ],
    [
     "claude-fable-5",
@@ -139,6 +139,14 @@
     null,
     null,
     "2026-10-15",
+    null
+   ],
+   [
+    "claude-haiku-5-5",
+    "Active",
+    null,
+    null,
+    "2027-10-07",
     null
    ],
    [
@@ -259,7 +267,7 @@
     "2026-04-14",
     "2026-06-15",
     null,
-    "claude-sonnet-4-6"
+    "claude-sonnet-5-5"
    ],
    [
     "claude-sonnet-4-5-20250929",
@@ -504,46 +512,6 @@
     "2026-09-28",
     null,
     "gpt-5.6-terra"
-   ],
-   [
-    "ft-babbage-002",
-    null,
-    "2026-04-22",
-    "2026-10-23",
-    null,
-    "gpt-5.6-terra"
-   ],
-   [
-    "ft-davinci-002",
-    null,
-    "2026-04-22",
-    "2026-10-23",
-    null,
-    "gpt-5.6-terra"
-   ],
-   [
-    "ft-gpt-3.5-turbo",
-    null,
-    "2026-04-22",
-    "2026-10-23",
-    null,
-    "gpt-5.6-terra"
-   ],
-   [
-    "ft-gpt-4",
-    null,
-    "2026-04-22",
-    "2026-10-23",
-    null,
-    "gpt-5.6-sol"
-   ],
-   [
-    "ft-gpt-4.1-nano-2025-04-14",
-    null,
-    "2026-04-22",
-    "2026-10-23",
-    null,
-    "gpt-5.6-luna"
    ],
    [
     "ft-o4-mini-2025-04-16",
@@ -834,6 +802,22 @@
     "gpt-4o-mini-transcribe-2025-12-15"
    ],
    [
+    "gpt-4o-mini-transcribe-2025-12-15",
+    null,
+    "2026-08-26",
+    "2027-02-26",
+    null,
+    "gpt-live-transcribe or gpt-transcribe"
+   ],
+   [
+    "gpt-4o-mini-tts",
+    null,
+    "2026-10-01",
+    "2027-01-06",
+    null,
+    "gpt-realtime-2.1-mini"
+   ],
+   [
     "gpt-4o-mini-tts-2025-03-20",
     null,
     "2026-10-01",
@@ -914,6 +898,14 @@
     "gpt-live-transcribe or gpt-transcribe"
    ],
    [
+    "gpt-5",
+    null,
+    "2026-06-11",
+    "2026-12-11",
+    null,
+    "gpt-5.6-sol"
+   ],
+   [
     "gpt-5-2025-08-07",
     null,
     "2026-06-11",
@@ -938,6 +930,14 @@
     "gpt-5.6-sol"
    ],
    [
+    "gpt-5-mini",
+    null,
+    "2026-06-11",
+    "2026-12-11",
+    null,
+    "gpt-5.6-terra"
+   ],
+   [
     "gpt-5-mini-2025-08-07",
     null,
     "2026-06-11",
@@ -946,12 +946,28 @@
     "gpt-5.6-terra"
    ],
    [
+    "gpt-5-nano",
+    null,
+    "2026-06-11",
+    "2026-12-11",
+    null,
+    "gpt-5.6-luna"
+   ],
+   [
     "gpt-5-nano-2025-08-07",
     null,
     "2026-06-11",
     "2026-12-11",
     null,
     "gpt-5.6-luna"
+   ],
+   [
+    "gpt-5-pro",
+    null,
+    "2026-06-11",
+    "2026-12-11",
+    null,
+    "gpt-5.6-sol ( reasoning.mode: pro )"
    ],
    [
     "gpt-5-pro-2025-10-06",
@@ -963,6 +979,14 @@
    ],
    [
     "gpt-5.1",
+    null,
+    "2026-10-01",
+    "2027-04-01",
+    null,
+    "gpt-6-sol"
+   ],
+   [
+    "gpt-5.1-2025-11-13",
     null,
     "2026-10-01",
     "2027-04-01",
@@ -1050,7 +1074,23 @@
     "gpt-6-luna"
    ],
    [
+    "gpt-5.4-nano-2026-03-17",
+    null,
+    "2026-10-01",
+    "2027-04-01",
+    null,
+    "gpt-6-luna"
+   ],
+   [
     "gpt-audio",
+    null,
+    "2026-07-20",
+    "2027-01-20",
+    null,
+    "gpt-audio-1.5"
+   ],
+   [
+    "gpt-audio-2025-08-28",
     null,
     "2026-07-20",
     "2027-01-20",
@@ -1070,6 +1110,14 @@
     null,
     "2026-04-22",
     "2026-07-23",
+    null,
+    "gpt-audio-1.5"
+   ],
+   [
+    "gpt-audio-mini-2025-12-15",
+    null,
+    "2026-07-20",
+    "2027-01-20",
     null,
     "gpt-audio-1.5"
    ],
@@ -1098,7 +1146,23 @@
     "gpt-image-2.5-sunburst or gpt-image-2.5-flare"
    ],
    [
+    "gpt-image-1.5-2025-12-16",
+    null,
+    "2026-06-02",
+    "2026-12-01",
+    null,
+    "gpt-image-2.5-sunburst or gpt-image-2.5-flare"
+   ],
+   [
     "gpt-realtime",
+    null,
+    "2026-07-20",
+    "2027-01-20",
+    null,
+    "gpt-realtime-2.1"
+   ],
+   [
+    "gpt-realtime-2025-08-28",
     null,
     "2026-07-20",
     "2027-01-20",
@@ -1118,6 +1182,14 @@
     null,
     "2026-04-22",
     "2026-07-23",
+    null,
+    "gpt-realtime-2.1-mini"
+   ],
+   [
+    "gpt-realtime-mini-2025-12-15",
+    null,
+    "2026-07-20",
+    "2027-01-20",
     null,
     "gpt-realtime-2.1-mini"
    ],
@@ -1170,6 +1242,14 @@
     "gpt-5.6-sol ( reasoning.mode: pro )"
    ],
    [
+    "o3",
+    null,
+    "2026-06-11",
+    "2026-12-11",
+    null,
+    "gpt-5.6-sol"
+   ],
+   [
     "o3-2025-04-16",
     null,
     "2026-06-11",
@@ -1208,6 +1288,14 @@
     "2026-10-23",
     null,
     "gpt-5.6-sol"
+   ],
+   [
+    "o3-pro",
+    null,
+    "2026-06-11",
+    "2026-12-11",
+    null,
+    "gpt-5.6-sol ( reasoning.mode: pro )"
    ],
    [
     "o3-pro-2025-06-10",

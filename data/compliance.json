@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-10-06T23:28:11+00:00",
-  "as_of": "2026-10-06",
+  "generated_at": "2026-10-30T21:01:06+00:00",
+  "as_of": "2026-10-30",
   "sources": [
     {
       "vendor": "Anthropic",
       "url": "https://docs.claude.com/en/docs/about-claude/model-deprecations",
       "status": "ok",
-      "fetched_at": "2026-10-06T23:23:23+00:00",
-      "bytes": 466301,
-      "raw_sha256": "b82b32c807bc2d97ba5d48e51c5266c3a3b668a2c1e267e960d099b157a547e7",
-      "note": "raw=anthropic-20261006T232323Z.html"
+      "fetched_at": "2026-10-30T20:55:15+00:00",
+      "bytes": 626893,
+      "raw_sha256": "e7e5a197bfc07fac8fb4ebb324f286b2359020ab077133a68f1585363aa326f9",
+      "note": "raw=anthropic-20261030T205515Z.html"
     },
     {
       "vendor": "OpenAI",
       "url": "https://developers.openai.com/api/docs/deprecations",
       "status": "ok",
-      "fetched_at": "2026-10-06T23:23:23+00:00",
-      "bytes": 490261,
-      "raw_sha256": "74cdaee2741ecbb302b747fe7cd45bfa254218373e5d42ea351ac2e67a546805",
-      "note": "raw=openai-20261006T232323Z.html"
+      "fetched_at": "2026-10-30T20:55:15+00:00",
+      "bytes": 510656,
+      "raw_sha256": "4c790c47fe893cf969163162ee5a23ccf94e4b691e2d49525d4ad25b6a6c0fb5",
+      "note": "raw=openai-20261030T205515Z.html"
     },
     {
       "vendor": "DeepSeek",
@@ -33,7 +33,7 @@
     "Anthropic": {
       "vendor": "Anthropic",
       "source_url": "https://docs.claude.com/en/docs/about-claude/model-deprecations",
-      "text": "Anthropic notifies customers with active deployments for models with upcoming retirements, providing at least 60 days' notice before model retirement for publicly released models",
+      "text": "Anthropic notifies customers with active deployments for models with upcoming retirements, providing at least 60 days\u2019 notice before model retirement for publicly released models",
       "floors": [
         {
           "class": "publicly released models",
@@ -186,7 +186,7 @@
       "status": "retired",
       "announced": "2026-04-14",
       "retirement": "2026-06-15",
-      "replacement": "claude-sonnet-4-6",
+      "replacement": "claude-sonnet-5-5",
       "source_url": "https://docs.claude.com/en/docs/about-claude/model-deprecations",
       "notice_days": 62,
       "floors": [
@@ -213,7 +213,7 @@
       "status": "retired",
       "announced": "2025-10-28",
       "retirement": "2026-02-19",
-      "replacement": "claude-sonnet-4-6",
+      "replacement": "claude-sonnet-5-5",
       "source_url": "https://docs.claude.com/en/docs/about-claude/model-deprecations",
       "notice_days": 114,
       "floors": [
@@ -294,7 +294,7 @@
       "status": "retired",
       "announced": "2025-08-13",
       "retirement": "2025-10-28",
-      "replacement": "claude-sonnet-4-6",
+      "replacement": "claude-sonnet-5-5",
       "source_url": "https://docs.claude.com/en/docs/about-claude/model-deprecations",
       "notice_days": 76,
       "floors": [
@@ -321,7 +321,7 @@
       "status": "retired",
       "announced": "2025-08-13",
       "retirement": "2025-10-28",
-      "replacement": "claude-sonnet-4-6",
+      "replacement": "claude-sonnet-5-5",
       "source_url": "https://docs.claude.com/en/docs/about-claude/model-deprecations",
       "notice_days": 76,
       "floors": [
@@ -429,7 +429,7 @@
       "status": "retired",
       "announced": "2025-01-21",
       "retirement": "2025-07-21",
-      "replacement": "claude-sonnet-4-6",
+      "replacement": "claude-sonnet-5-5",
       "source_url": "https://docs.claude.com/en/docs/about-claude/model-deprecations",
       "notice_days": 181,
       "floors": [
@@ -726,8 +726,94 @@
     },
     {
       "vendor": "OpenAI",
+      "model_id": "gpt-5.4-nano-2026-03-17",
+      "family": "gpt-5.4-nano-2026-03-17",
+      "status": "deprecated",
+      "announced": "2026-10-01",
+      "retirement": "2027-04-01",
+      "replacement": "gpt-6-luna",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 182,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 182
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 182,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
       "model_id": "gpt-5.1",
       "family": "gpt-5.1",
+      "status": "deprecated",
+      "announced": "2026-10-01",
+      "retirement": "2027-04-01",
+      "replacement": "gpt-6-sol",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 182,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 182
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 182,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
+      "model_id": "gpt-5.1-2025-11-13",
+      "family": "gpt-5.1-2025-11-13",
       "status": "deprecated",
       "announced": "2026-10-01",
       "retirement": "2027-04-01",
@@ -855,6 +941,49 @@
     },
     {
       "vendor": "OpenAI",
+      "model_id": "gpt-4o-mini-tts",
+      "family": "gpt-4o-mini-tts",
+      "status": "deprecated",
+      "announced": "2026-10-01",
+      "retirement": "2027-01-06",
+      "replacement": "gpt-realtime-2.1-mini",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 97,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 182
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 182,
+          "verdict": "SHORT"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "SHORT",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
       "model_id": "gpt-4o-mini-tts-2025-03-20",
       "family": "gpt-4o-mini-tts-2025-03-20",
       "status": "deprecated",
@@ -928,49 +1057,6 @@
         "specialized": {
           "floor_days": 92,
           "verdict": "PASS"
-        },
-        "preview": {
-          "floor_days": 14,
-          "verdict": "PASS"
-        }
-      },
-      "primary_floor": "ga",
-      "primary_verdict": "SHORT",
-      "is_preview": false,
-      "note": null
-    },
-    {
-      "vendor": "OpenAI",
-      "model_id": "gpt-5.4-cyber",
-      "family": "gpt-5.4-cyber",
-      "status": "retired",
-      "announced": "2026-09-11",
-      "retirement": "2026-10-01",
-      "replacement": "The most capable cyber model available to you.",
-      "source_url": "https://developers.openai.com/api/docs/deprecations",
-      "notice_days": 20,
-      "floors": [
-        {
-          "class": "ga",
-          "floor_days": 181
-        },
-        {
-          "class": "specialized",
-          "floor_days": 91
-        },
-        {
-          "class": "preview",
-          "floor_days": 14
-        }
-      ],
-      "verdicts": {
-        "ga": {
-          "floor_days": 181,
-          "verdict": "SHORT"
-        },
-        "specialized": {
-          "floor_days": 91,
-          "verdict": "SHORT"
         },
         "preview": {
           "floor_days": 14,
@@ -1113,6 +1199,49 @@
     },
     {
       "vendor": "OpenAI",
+      "model_id": "gpt-4o-mini-transcribe-2025-12-15",
+      "family": "gpt-4o-mini-transcribe-2025-12-15",
+      "status": "deprecated",
+      "announced": "2026-08-26",
+      "retirement": "2027-02-26",
+      "replacement": "gpt-live-transcribe or gpt-transcribe",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 184,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 184
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 184,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
       "model_id": "gpt-4o-transcribe-diarize",
       "family": "gpt-4o-transcribe-diarize",
       "status": "deprecated",
@@ -1199,8 +1328,94 @@
     },
     {
       "vendor": "OpenAI",
+      "model_id": "gpt-realtime-2025-08-28",
+      "family": "gpt-realtime-2025-08-28",
+      "status": "deprecated",
+      "announced": "2026-07-20",
+      "retirement": "2027-01-20",
+      "replacement": "gpt-realtime-2.1",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 184,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 184
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 184,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
       "model_id": "gpt-audio",
       "family": "gpt-audio",
+      "status": "deprecated",
+      "announced": "2026-07-20",
+      "retirement": "2027-01-20",
+      "replacement": "gpt-audio-1.5",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 184,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 184
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 184,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
+      "model_id": "gpt-audio-2025-08-28",
+      "family": "gpt-audio-2025-08-28",
       "status": "deprecated",
       "announced": "2026-07-20",
       "retirement": "2027-01-20",
@@ -1371,8 +1586,94 @@
     },
     {
       "vendor": "OpenAI",
+      "model_id": "gpt-realtime-mini-2025-12-15",
+      "family": "gpt-realtime-mini-2025-12-15",
+      "status": "deprecated",
+      "announced": "2026-07-20",
+      "retirement": "2027-01-20",
+      "replacement": "gpt-realtime-2.1-mini",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 184,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 184
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 184,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
       "model_id": "gpt-audio-mini",
       "family": "gpt-audio-mini",
+      "status": "deprecated",
+      "announced": "2026-07-20",
+      "retirement": "2027-01-20",
+      "replacement": "gpt-audio-1.5",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 184,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 184
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 184,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
+      "model_id": "gpt-audio-mini-2025-12-15",
+      "family": "gpt-audio-mini-2025-12-15",
       "status": "deprecated",
       "announced": "2026-07-20",
       "retirement": "2027-01-20",
@@ -1543,12 +1844,98 @@
     },
     {
       "vendor": "OpenAI",
+      "model_id": "gpt-5",
+      "family": "gpt-5",
+      "status": "deprecated",
+      "announced": "2026-06-11",
+      "retirement": "2026-12-11",
+      "replacement": "gpt-5.6-sol",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 183,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 183
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 183,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
       "model_id": "gpt-5-2025-08-07",
       "family": "gpt-5-2025-08-07",
       "status": "deprecated",
       "announced": "2026-06-11",
       "retirement": "2026-12-11",
       "replacement": "gpt-5.6-sol",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 183,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 183
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 183,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
+      "model_id": "gpt-5-mini",
+      "family": "gpt-5-mini",
+      "status": "deprecated",
+      "announced": "2026-06-11",
+      "retirement": "2026-12-11",
+      "replacement": "gpt-5.6-terra",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "notice_days": 183,
       "floors": [
@@ -1629,12 +2016,98 @@
     },
     {
       "vendor": "OpenAI",
+      "model_id": "gpt-5-nano",
+      "family": "gpt-5-nano",
+      "status": "deprecated",
+      "announced": "2026-06-11",
+      "retirement": "2026-12-11",
+      "replacement": "gpt-5.6-luna",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 183,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 183
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 183,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
       "model_id": "gpt-5-nano-2025-08-07",
       "family": "gpt-5-nano-2025-08-07",
       "status": "deprecated",
       "announced": "2026-06-11",
       "retirement": "2026-12-11",
       "replacement": "gpt-5.6-luna",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 183,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 183
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 183,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
+      "model_id": "gpt-5-pro",
+      "family": "gpt-5-pro",
+      "status": "deprecated",
+      "announced": "2026-06-11",
+      "retirement": "2026-12-11",
+      "replacement": "gpt-5.6-sol ( reasoning.mode: pro )",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "notice_days": 183,
       "floors": [
@@ -1715,12 +2188,98 @@
     },
     {
       "vendor": "OpenAI",
+      "model_id": "o3",
+      "family": "o3",
+      "status": "deprecated",
+      "announced": "2026-06-11",
+      "retirement": "2026-12-11",
+      "replacement": "gpt-5.6-sol",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 183,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 183
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 183,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
       "model_id": "o3-2025-04-16",
       "family": "o3-2025-04-16",
       "status": "deprecated",
       "announced": "2026-06-11",
       "retirement": "2026-12-11",
       "replacement": "gpt-5.6-sol",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 183,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 183
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 183,
+          "verdict": "PASS"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "PASS",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
+      "model_id": "o3-pro",
+      "family": "o3-pro",
+      "status": "deprecated",
+      "announced": "2026-06-11",
+      "retirement": "2026-12-11",
+      "replacement": "gpt-5.6-sol ( reasoning.mode: pro )",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "notice_days": 183,
       "floors": [
@@ -1887,6 +2446,49 @@
     },
     {
       "vendor": "OpenAI",
+      "model_id": "gpt-image-1.5-2025-12-16",
+      "family": "gpt-image-1.5-2025-12-16",
+      "status": "deprecated",
+      "announced": "2026-06-02",
+      "retirement": "2026-12-01",
+      "replacement": "gpt-image-2.5-sunburst or gpt-image-2.5-flare",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 182,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 183
+        },
+        {
+          "class": "specialized",
+          "floor_days": 92
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 183,
+          "verdict": "SHORT"
+        },
+        "specialized": {
+          "floor_days": 92,
+          "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "SHORT",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
       "model_id": "chatgpt-image-latest",
       "family": "chatgpt-image-latest",
       "status": "deprecated",
@@ -1917,6 +2519,49 @@
         "specialized": {
           "floor_days": 92,
           "verdict": "PASS"
+        },
+        "preview": {
+          "floor_days": 14,
+          "verdict": "PASS"
+        }
+      },
+      "primary_floor": "ga",
+      "primary_verdict": "SHORT",
+      "is_preview": false,
+      "note": null
+    },
+    {
+      "vendor": "OpenAI",
+      "model_id": "gpt-5.4-cyber",
+      "family": "gpt-5.4-cyber",
+      "status": "retired",
+      "announced": "2026-09-11",
+      "retirement": "2026-10-01",
+      "replacement": "The most capable cyber model available to you.",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "notice_days": 20,
+      "floors": [
+        {
+          "class": "ga",
+          "floor_days": 181
+        },
+        {
+          "class": "specialized",
+          "floor_days": 91
+        },
+        {
+          "class": "preview",
+          "floor_days": 14
+        }
+      ],
+      "verdicts": {
+        "ga": {
+          "floor_days": 181,
+          "verdict": "SHORT"
+        },
+        "specialized": {
+          "floor_days": 91,
+          "verdict": "SHORT"
         },
         "preview": {
           "floor_days": 14,
@@ -2018,7 +2663,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-3.5-turbo-0125",
       "family": "gpt-3.5-turbo-0125",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-terra",
@@ -2061,7 +2706,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-3.5-turbo",
       "family": "gpt-3.5-turbo",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-terra",
@@ -2104,7 +2749,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-3.5-turbo-completions",
       "family": "gpt-3.5-turbo-completions",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-terra",
@@ -2147,7 +2792,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-4-0613",
       "family": "gpt-4-0613",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2190,7 +2835,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-4",
       "family": "gpt-4",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2233,7 +2878,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-4-0613-completions",
       "family": "gpt-4-0613-completions",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2276,7 +2921,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-4-completions",
       "family": "gpt-4-completions",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2319,7 +2964,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-4-1106-preview",
       "family": "gpt-4-1106-preview",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2362,7 +3007,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-4-turbo",
       "family": "gpt-4-turbo",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2405,7 +3050,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-4-turbo-2024-04-09",
       "family": "gpt-4-turbo-2024-04-09",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2448,7 +3093,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-4-turbo-completions",
       "family": "gpt-4-turbo-completions",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2491,7 +3136,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-4.1-nano",
       "family": "gpt-4.1-nano",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-luna",
@@ -2534,7 +3179,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-4.1-nano-2025-04-14",
       "family": "gpt-4.1-nano-2025-04-14",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-luna",
@@ -2577,7 +3222,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-4o-2024-05-13",
       "family": "gpt-4o-2024-05-13",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2620,7 +3265,7 @@
       "vendor": "OpenAI",
       "model_id": "gpt-image-1",
       "family": "gpt-image-1",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-image-2.5-sunburst or gpt-image-2.5-flare",
@@ -2663,7 +3308,7 @@
       "vendor": "OpenAI",
       "model_id": "o1-2024-12-17",
       "family": "o1-2024-12-17",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2706,7 +3351,7 @@
       "vendor": "OpenAI",
       "model_id": "o1",
       "family": "o1",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2749,7 +3394,7 @@
       "vendor": "OpenAI",
       "model_id": "o1-pro-2025-03-19",
       "family": "o1-pro-2025-03-19",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol ( reasoning.mode: pro )",
@@ -2792,7 +3437,7 @@
       "vendor": "OpenAI",
       "model_id": "o1-pro",
       "family": "o1-pro",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol ( reasoning.mode: pro )",
@@ -2835,7 +3480,7 @@
       "vendor": "OpenAI",
       "model_id": "o3-mini-2025-01-31",
       "family": "o3-mini-2025-01-31",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2878,7 +3523,7 @@
       "vendor": "OpenAI",
       "model_id": "o3-mini",
       "family": "o3-mini",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-sol",
@@ -2921,7 +3566,7 @@
       "vendor": "OpenAI",
       "model_id": "ft-o4-mini-2025-04-16",
       "family": "ft-o4-mini-2025-04-16",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-terra",
@@ -2964,7 +3609,7 @@
       "vendor": "OpenAI",
       "model_id": "o4-mini-2025-04-16",
       "family": "o4-mini-2025-04-16",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-terra",
@@ -3007,222 +3652,7 @@
       "vendor": "OpenAI",
       "model_id": "o4-mini",
       "family": "o4-mini",
-      "status": "deprecated",
-      "announced": "2026-04-22",
-      "retirement": "2026-10-23",
-      "replacement": "gpt-5.6-terra",
-      "source_url": "https://developers.openai.com/api/docs/deprecations",
-      "notice_days": 184,
-      "floors": [
-        {
-          "class": "ga",
-          "floor_days": 183
-        },
-        {
-          "class": "specialized",
-          "floor_days": 91
-        },
-        {
-          "class": "preview",
-          "floor_days": 14
-        }
-      ],
-      "verdicts": {
-        "ga": {
-          "floor_days": 183,
-          "verdict": "PASS"
-        },
-        "specialized": {
-          "floor_days": 91,
-          "verdict": "PASS"
-        },
-        "preview": {
-          "floor_days": 14,
-          "verdict": "PASS"
-        }
-      },
-      "primary_floor": "ga",
-      "primary_verdict": "PASS",
-      "is_preview": false,
-      "note": null
-    },
-    {
-      "vendor": "OpenAI",
-      "model_id": "ft-gpt-3.5-turbo",
-      "family": "ft-gpt-3.5-turbo",
-      "status": "deprecated",
-      "announced": "2026-04-22",
-      "retirement": "2026-10-23",
-      "replacement": "gpt-5.6-terra",
-      "source_url": "https://developers.openai.com/api/docs/deprecations",
-      "notice_days": 184,
-      "floors": [
-        {
-          "class": "ga",
-          "floor_days": 183
-        },
-        {
-          "class": "specialized",
-          "floor_days": 91
-        },
-        {
-          "class": "preview",
-          "floor_days": 14
-        }
-      ],
-      "verdicts": {
-        "ga": {
-          "floor_days": 183,
-          "verdict": "PASS"
-        },
-        "specialized": {
-          "floor_days": 91,
-          "verdict": "PASS"
-        },
-        "preview": {
-          "floor_days": 14,
-          "verdict": "PASS"
-        }
-      },
-      "primary_floor": "ga",
-      "primary_verdict": "PASS",
-      "is_preview": false,
-      "note": null
-    },
-    {
-      "vendor": "OpenAI",
-      "model_id": "ft-gpt-4",
-      "family": "ft-gpt-4",
-      "status": "deprecated",
-      "announced": "2026-04-22",
-      "retirement": "2026-10-23",
-      "replacement": "gpt-5.6-sol",
-      "source_url": "https://developers.openai.com/api/docs/deprecations",
-      "notice_days": 184,
-      "floors": [
-        {
-          "class": "ga",
-          "floor_days": 183
-        },
-        {
-          "class": "specialized",
-          "floor_days": 91
-        },
-        {
-          "class": "preview",
-          "floor_days": 14
-        }
-      ],
-      "verdicts": {
-        "ga": {
-          "floor_days": 183,
-          "verdict": "PASS"
-        },
-        "specialized": {
-          "floor_days": 91,
-          "verdict": "PASS"
-        },
-        "preview": {
-          "floor_days": 14,
-          "verdict": "PASS"
-        }
-      },
-      "primary_floor": "ga",
-      "primary_verdict": "PASS",
-      "is_preview": false,
-      "note": null
-    },
-    {
-      "vendor": "OpenAI",
-      "model_id": "ft-gpt-4.1-nano-2025-04-14",
-      "family": "ft-gpt-4.1-nano-2025-04-14",
-      "status": "deprecated",
-      "announced": "2026-04-22",
-      "retirement": "2026-10-23",
-      "replacement": "gpt-5.6-luna",
-      "source_url": "https://developers.openai.com/api/docs/deprecations",
-      "notice_days": 184,
-      "floors": [
-        {
-          "class": "ga",
-          "floor_days": 183
-        },
-        {
-          "class": "specialized",
-          "floor_days": 91
-        },
-        {
-          "class": "preview",
-          "floor_days": 14
-        }
-      ],
-      "verdicts": {
-        "ga": {
-          "floor_days": 183,
-          "verdict": "PASS"
-        },
-        "specialized": {
-          "floor_days": 91,
-          "verdict": "PASS"
-        },
-        "preview": {
-          "floor_days": 14,
-          "verdict": "PASS"
-        }
-      },
-      "primary_floor": "ga",
-      "primary_verdict": "PASS",
-      "is_preview": false,
-      "note": null
-    },
-    {
-      "vendor": "OpenAI",
-      "model_id": "ft-babbage-002",
-      "family": "ft-babbage-002",
-      "status": "deprecated",
-      "announced": "2026-04-22",
-      "retirement": "2026-10-23",
-      "replacement": "gpt-5.6-terra",
-      "source_url": "https://developers.openai.com/api/docs/deprecations",
-      "notice_days": 184,
-      "floors": [
-        {
-          "class": "ga",
-          "floor_days": 183
-        },
-        {
-          "class": "specialized",
-          "floor_days": 91
-        },
-        {
-          "class": "preview",
-          "floor_days": 14
-        }
-      ],
-      "verdicts": {
-        "ga": {
-          "floor_days": 183,
-          "verdict": "PASS"
-        },
-        "specialized": {
-          "floor_days": 91,
-          "verdict": "PASS"
-        },
-        "preview": {
-          "floor_days": 14,
-          "verdict": "PASS"
-        }
-      },
-      "primary_floor": "ga",
-      "primary_verdict": "PASS",
-      "is_preview": false,
-      "note": null
-    },
-    {
-      "vendor": "OpenAI",
-      "model_id": "ft-davinci-002",
-      "family": "ft-davinci-002",
-      "status": "deprecated",
+      "status": "retired",
       "announced": "2026-04-22",
       "retirement": "2026-10-23",
       "replacement": "gpt-5.6-terra",
@@ -6919,18 +7349,18 @@
   ],
   "track_records": {
     "OpenAI": {
-      "with_notice": 146,
+      "with_notice": 156,
       "min_days": 3,
       "max_days": 458,
       "median_days": 182.0,
       "below_floor": {
-        "ga": 72,
+        "ga": 74,
         "specialized": 7,
         "preview": 4
       },
       "by_status": {
-        "retired": 88,
-        "deprecated": 58
+        "retired": 112,
+        "deprecated": 44
       }
     },
     "Anthropic": {

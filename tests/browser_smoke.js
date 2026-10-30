@@ -23,7 +23,7 @@ const { chromium } = require('playwright');
     const response = await page.goto(base + `?v=${Date.now()}`, { waitUntil: 'networkidle' });
     assert(response.ok(), `index returned ${response.status()}`);
     await page.waitForSelector('#tables tr');
-    assert((await page.textContent('#asof')).includes('fetched 2026-10-06'));
+    assert((await page.textContent('#asof')).includes('fetched 2026-10-30'));
     const captures = await page.locator('.captures li').allTextContents();
     assert.strictEqual(captures.length, 2, `captures: ${captures.length}`);
     for (const c of captures) assert(/[0-9a-f]{64}/.test(c), `no receipt in: ${c}`);

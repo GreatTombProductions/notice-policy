@@ -110,7 +110,11 @@ class TestBuildGates(unittest.TestCase):
         G.main()
         sys.argv = ["generate.py"]
         G.main()
-        self.assertEqual(json.loads(G.OUT_PATH.read_text())["as_of"], "2026-10-06")
+        stamps = []
+        for path in self.tmp.glob("*.html"):
+            day = path.name.split("-", 1)[1].split("T", 1)[0]
+            stamps.append(f"{day[:4]}-{day[4:6]}-{day[6:8]}")
+        self.assertEqual(json.loads(G.OUT_PATH.read_text())["as_of"], max(stamps))
 
     def test_receipt_mismatch_stops(self):
         receipt = sorted(self.tmp.glob("openai-*.sha256"))[-1]
